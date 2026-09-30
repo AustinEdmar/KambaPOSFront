@@ -11,7 +11,7 @@ const NAV_GROUPS = [
         items: [
             {
                 label: "Dashboard",
-                href: "/dashboard",
+                href: "/",
                 icon: <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2" /><rect x="14" y="3" width="7" height="7" rx="2" /><rect x="3" y="14" width="7" height="7" rx="2" /><rect x="14" y="14" width="7" height="7" rx="2" /></svg>,
             },
             {
@@ -31,15 +31,17 @@ const NAV_GROUPS = [
                 icon: <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" /><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" /></svg>,
             },
             {
-                label: "Movimentacoes",
-                href: "/movements",
+                label: "Cash Movimentações",
+                href: "/cash-movements",
                 icon: <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M3 10h18M7 15h2m4 0h2M5 6h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z" /></svg>,
             },
+
             {
-                label: "Inventário",
-                href: "/inventory",
+                label: "Stock Movimentações",
+                href: "/stock-movements",
                 icon: <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M3 10h18M7 15h2m4 0h2M5 6h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z" /></svg>,
             },
+
             {
                 label: "Turnos",
                 href: "/shifts",
@@ -48,13 +50,18 @@ const NAV_GROUPS = [
         ],
     },
     {
-        label: "Análise",
+        label: "Administração",
         items: [
-            /*  {
-                 label: "Relatórios",
-                 href: "/reports",
-                 icon: <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M9 17V11M12 17V7M15 17v-4M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" /></svg>,
-             }, */
+            {
+                label: "Relatórios",
+                href: "/reports",
+                icon: <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M9 17V11M12 17V7M15 17v-4M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" /></svg>,
+            },
+            {
+                label: "Faturas",
+                href: "/invoices",
+                icon: <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M9 17V11M12 17V7M15 17v-4M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" /></svg>,
+            },
             {
                 label: "Funcionários",
                 href: "/users",
@@ -161,7 +168,7 @@ export function Sidebar({
             </div>
 
             {/* Store */}
-            {sidebarOpen && (
+            {/*  {sidebarOpen && (
                 <div className="pos-store-pill">
                     <div className="pos-store-icon">{storeInitial}</div>
                     <div className="pos-store-info">
@@ -170,7 +177,7 @@ export function Sidebar({
                     </div>
                     <svg width="12" height="12" fill="none" stroke="#78716C" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
                 </div>
-            )}
+            )} */}
 
             {/* Nav */}
             <nav className="pos-nav">

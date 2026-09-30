@@ -72,6 +72,9 @@ export interface Payment {
     paid_at: string
 }
 
+
+
+
 export const PAYMENT_METHOD_META: Record<PaymentMethod, { label: string; icon: string }> = {
     cash: { label: "Dinheiro", icon: "💵" },
     card: { label: "Cartão", icon: "💳" },

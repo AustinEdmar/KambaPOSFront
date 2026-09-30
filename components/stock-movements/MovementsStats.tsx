@@ -1,52 +1,50 @@
+
 "use client"
 
 import {
-    ClipboardList,
-    Clock,
-    CheckCircle2,
-    RotateCcw,
-    Wallet,
+    ArrowDownCircle,
+    ArrowUpCircle,
+    RefreshCcw,
+    AlertTriangle,
+    ListTree,
 } from "lucide-react"
 
-import {
-    OrderStats,
-    formatCurrency,
-} from "@/lib/orders-data"
+import { StockMovementStats } from "@/lib/stock-movements-data"
 
-interface OrdersStatsProps {
-    stats: OrderStats
+interface MovementsStatsProps {
+    stats: StockMovementStats
 }
 
-export function OrdersStats({ stats }: OrdersStatsProps) {
+export function MovementsStats({ stats }: MovementsStatsProps) {
     const cards = [
         {
-            title: "Total de pedidos",
-            value: stats.total_orders,
-            icon: ClipboardList,
+            title: "Total de movimentos",
+            value: stats.total,
+            icon: ListTree,
             iconClass: "products-stat-icon-blue",
         },
         {
-            title: "Abertos",
-            value: stats.open_orders,
-            icon: Clock,
-            iconClass: "products-stat-icon-purple",
-        },
-        {
-            title: "Fechados",
-            value: stats.closed_orders,
-            icon: CheckCircle2,
+            title: "Entradas (página)",
+            value: stats.inbound,
+            icon: ArrowUpCircle,
             iconClass: "products-stat-icon-green",
         },
         {
-            title: "Reembolsados",
-            value: stats.refunded_orders,
-            icon: RotateCcw,
+            title: "Saídas (página)",
+            value: stats.outbound,
+            icon: ArrowDownCircle,
             iconClass: "products-stat-icon-red",
         },
         {
-            title: "Receita (fechados)",
-            value: formatCurrency(stats.total_revenue),
-            icon: Wallet,
+            title: "Ajustes (página)",
+            value: stats.adjustments,
+            icon: RefreshCcw,
+            iconClass: "products-stat-icon-purple",
+        },
+        {
+            title: "Quebras (página)",
+            value: stats.losses,
+            icon: AlertTriangle,
             iconClass: "products-stat-icon-teal",
         },
     ]
